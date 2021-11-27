@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="704.0" prefWidth="1073.0" style="-fx-background-color: transparent; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.designController">
+   <children>
+      <AnchorPane layoutY="2.0" onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #b41832; -fx-background-radius: 10;" stylesheets="@TableViewCss.css" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+         <children>
+            <Label layoutX="14.0" layoutY="16.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="Inventorys&#10;System&#10;Simulation" textFill="#b41832">
+               <font>
+                  <Font name="Cooper Black" size="34.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <Label layoutX="14.0" layoutY="180.0" text="Assume that :&#10;initial inventory = 3&#10;order-up-to level = 11&#10;initial lead time = 1" textFill="WHITE">
+               <font>
+                  <Font name="Cambria Math" size="20.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <TableView fx:id="simulTable" layoutX="36.0" layoutY="406.0" prefHeight="280.0" prefWidth="998.0" />
+            <TableView fx:id="RefrigTable" layoutX="251.0" layoutY="183.0" prefHeight="200.0" prefWidth="220.0" />
+            <TableView fx:id="leadTable" layoutX="774.0" layoutY="183.0" prefHeight="200.0" prefWidth="220.0" />
+            <JFXTextField fx:id="DaysText" focusColor="WHITE" layoutX="251.0" layoutY="122.0" onAction="#Simulation" prefHeight="25.0" prefWidth="430.0" promptText="Enter number of Days for Simulation Process" style="-fx-prompt-text-fill: white; -fx-text-fill: white;" unFocusColor="BLACK">
+               <font>
+                  <Font name="Cambria Math" size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton layoutX="1005.0" onAction="#closeWindow" opacity="0.7" ripplerFill="#b4183200" styleClass="anclose" stylesheets="@TableViewCss.css" text="X" textFill="WHITE" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>
